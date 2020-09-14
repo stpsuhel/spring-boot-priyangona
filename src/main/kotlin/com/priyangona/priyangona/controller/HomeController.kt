@@ -8,7 +8,7 @@ class HomeController {
 
     @RequestMapping(value = ["/"])
     fun getHomePage(): String {
-        return "home"
+        return "index"
     }
 
 }
