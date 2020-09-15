@@ -7,11 +7,34 @@
 
 <div th:replace="fragment/header :: application-top-header"></div>
 
+
+
 <div class="container-fluid">
+    <form method="post" th:action="@{./add-category}" th:object="${category}">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <div class="form-group">
+                        <label for="fullName">Category Name<a
+                                class="text-danger">*</a></label>
+                        <input class="form-control disableProductInfo"
+                               placeholder="Enter Category Name"
+                               th:name="name" id="fullName"
+                               th:field="*{name}" type="text">
+                        <small class="form-text text-muted"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
+        <div class="card-action">
+            <input class="btn btn-primary hideButton" type="submit"/>
+            <button class="btn btn-danger hideButton" id="cancel-button" type="reset">Cancel</button>
+        </div>
+    </form>
 
 </div>
+
 
 <div th:replace="fragment/scripts :: application-default-page-script"></div>
 
