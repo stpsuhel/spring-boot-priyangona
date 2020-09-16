@@ -1,5 +1,6 @@
-package com.priyangona.priyangona.model
+package com.priyangona.priyangona.model.database
 
+import com.priyangona.priyangona.model.AuditModel
 import org.jetbrains.annotations.NotNull
 import javax.persistence.Entity
 

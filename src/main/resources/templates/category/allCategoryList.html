@@ -8,13 +8,47 @@
 <div th:replace="fragment/header :: application-top-header"></div>
 
 
-
 <div class="container-fluid">
 
+    <div class="m-5">
 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header checkId">
+                        <div class="d-flex align-items-center">
+                            <h4 class="card-title">Category List</h4>
+                            <button id="addCategory"
+                                    class="btn btn-primary btn-md ml-auto">
+                                <i class="fas fa-save"></i>
+                                Add Category
+                            </button>
+                        </div>
+                    </div>
 
+                    <div class="m-3">
+                        <table class="table">
+                            <thead class="grey lighten-2">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="row-category" th:id="${categoryItem.id}" style="cursor: pointer"
+                                th:each="categoryItem : ${categoryList}">
+                                <td th:text="${categoryItem.id}"></td>
+                                <td th:text="${categoryItem.name}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
-
 
 <div th:replace="fragment/scripts :: application-default-page-script"></div>
 

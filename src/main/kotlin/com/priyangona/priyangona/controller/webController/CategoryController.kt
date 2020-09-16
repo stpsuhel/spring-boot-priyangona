@@ -1,6 +1,6 @@
-package com.priyangona.priyangona.controller
+package com.priyangona.priyangona.controller.webController
 
-import com.priyangona.priyangona.model.Category
+import com.priyangona.priyangona.model.database.Category
 import com.priyangona.priyangona.repository.CategoryRepository
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -38,7 +38,7 @@ class CategoryController(val categoryRepository: CategoryRepository) {
         val categoryList = categoryRepository.findAll()
 
         model.addAttribute("categoryList", categoryList)
-        return "category/addCategory"
+        return "category/allCategoryList"
     }
 
 }
